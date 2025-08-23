@@ -1,2 +1,7 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# Force GitHub language detection
+*.php linguist-language=PHP
+*.css linguist-language=CSS
+*.html linguist-language=HTML
+*.js linguist-language=JavaScript
