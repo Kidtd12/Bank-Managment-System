@@ -1,0 +1,257 @@
+/* General Reset */
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f2f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+html,body{
+background: url("../Images/back.jpeg") center/cover no-repeat fixed;
+font-family: 'Poppins', sans-serif;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  color: #111;
+  background: #fff;
+}
+
+nav .menu-btn i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Responsive Navigation */
+@media (max-width: 920px) {
+  nav .menu-btn i {
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s ease;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  nav ul li {
+    margin: 40px 0;
+    width: 100%;
+  }
+  nav ul li a:hover {
+    color: cyan;
+    background: none;
+  }
+}
+
+/* Content Styling */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+
+.content div {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+/* Postcard Component */
+.postcard {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+  border-radius: 10px;
+  margin: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.postcard.light {
+  background: #e1e5ea;
+}
+.postcard.dark {
+  background: #18151f;
+}
+
+.postcard .postcard__title {
+  font-size: 1.75rem;
+}
+.postcard .postcard__img {
+  max-height: 180px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.postcard .postcard__bar {
+  width: 50px;
+  height: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background: #424242;
+  transition: width 0.2s ease;
+}
+
+.postcard:hover .postcard__bar {
+  width: 100px;
+}
+
+@media screen and (min-width: 769px) {
+  .postcard .postcard__title {
+    font-size: 2rem;
+  }
+  .postcard .postcard__img {
+    max-width: 300px;
+    transition: transform 0.3s ease;
+  }
+  .postcard:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .postcard__text {
+    padding: 2rem 3.5rem;
+  }
+}
+
+/* Form Styling */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+}
+
+.container .form {
+  background: #fff;
+  padding: 30px 35px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container .form .button {
+  background: #205bd1;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.container .form .button:hover {
+  background: #2838b1;
+}
+
+/* Navbar Styling */
+.navbar {
+  background: #fff;
+  padding:16px 3rem;
+  border-bottom: 1px solid #d6d6d6;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: -100rem;
+}
+
+.navbar .navbar-brand {
+  color: #0838d5;
+  font-family: cursive;
+  font-size: 1.4rem;
+}
+
+.navbar .nav-item i {
+  font-size: 18px;
+}
+.navbar .dropdown-item i {
+  font-size: 16px;
+}
+
+.navbar .badge {
+  background: #f44336;
+  font-size: 11px;
+  border-radius: 20px;
+  position: absolute;
+  min-width: 10px;
+  padding: 4px 6px;
+  top: 5px;
+}
+
+.navbar a.notifications,
+.navbar a.messages {
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .navbar .dropdown-menu {
+    border-radius: 1px;
+    border-color: #e5e5e5;
+  }
+}
+
+.container-lg {
+  margin-top: -34rem;
+}
+.card-body, .transferHistory {
+  overflow-y: scroll;
+}
+.card{
+  margin-top: -34rem;
+}
+.up{
+  margin-top: -34rem;
+}
+.card2{
+  padding-top:9rem;
+}
+
+.form2{
+  padding-top:40rem;
+}
